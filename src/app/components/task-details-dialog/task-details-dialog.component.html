@@ -1,0 +1,13 @@
+<div class="task-details-container">
+    <h2>Task Details</h2>
+    <div class="details">
+        <div class="detail-row"><strong>Title:</strong> {{ data.title }}</div>
+        <div class="detail-row"><strong>Description:</strong> {{ data.description }}</div>
+        <div class="detail-row"><strong>Priority:</strong> {{ data.priority }}</div>
+        <div class="detail-row"><strong>Due Date:</strong> {{ data.dueDate | date: 'shortDate' }}</div>
+        <div class="detail-row"><strong>Status:</strong> {{ data.status }}</div>
+    </div>
+    <div class="close-button">
+        <button mat-button (click)="close()">Close</button>
+    </div>
+</div>

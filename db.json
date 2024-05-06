@@ -1,0 +1,113 @@
+{
+  "userData": [
+    {
+      "id": "f602",
+      "username": "hello",
+      "password": "hellodear",
+      "email": "hello@gmail.com"
+    },
+    {
+      "id": "214c",
+      "username": "hello",
+      "password": "hellodear"
+    },
+    {
+      "id": "e336",
+      "username": "vipin",
+      "password": "silent",
+      "email": "vipin5@gmail.com"
+    },
+    {
+      "id": "02b9",
+      "username": "vipin",
+      "password": "silent"
+    },
+    {
+      "id": "3201",
+      "username": "vipin",
+      "password": "silent"
+    },
+    {
+      "id": "9c10",
+      "username": "edward",
+      "password": "silent"
+    },
+    {
+      "id": "413b",
+      "username": "ragu",
+      "password": "silent"
+    },
+    {
+      "id": "8d38",
+      "username": "vipin",
+      "password": "silent"
+    },
+    {
+      "id": "1b44",
+      "username": "vipin",
+      "password": "silent"
+    },
+    {
+      "id": "a40c",
+      "username": "vipin",
+      "password": "silent"
+    },
+    {
+      "id": "2fd7",
+      "username": "biju",
+      "password": "password"
+    },
+    {
+      "id": "b41f",
+      "username": "dilna",
+      "password": "abraham"
+    },
+    {
+      "id": "8abf",
+      "username": "simon",
+      "password": "neerveli"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "ca6d",
+      "title": "animal 2",
+      "description": "shf fdjnjs",
+      "priority": "High",
+      "dueDate": "1998-07-03",
+      "status": "Completed"
+    },
+    {
+      "id": "d236",
+      "title": "edfwrfw",
+      "description": "fkngr rkmk;rw",
+      "priority": "Low",
+      "dueDate": "1998-06-04",
+      "status": "Completed"
+    },
+    {
+      "id": "741d",
+      "title": "jda",
+      "description": "dsjsd sdbsd",
+      "priority": "Low",
+      "dueDate": "2024-06-04",
+      "status": "Completed"
+    },
+    {
+      "id": "5057",
+      "title": "Animal",
+      "description": "Domestic animal",
+      "priority": "High",
+      "dueDate": "2024-04-25",
+      "status": "Completed"
+    },
+    {
+      "id": "446e",
+      "title": "urwfuwr",
+      "description": "efjw",
+      "priority": "Medium",
+      "dueDate": "2022-06-04",
+      "status": "Pending"
+    }
+  ]
+}

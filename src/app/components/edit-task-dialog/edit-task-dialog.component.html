@@ -1,0 +1,37 @@
+<div class="edit-task-dialog">
+    <h2>Edit Task</h2>
+
+    <form [formGroup]="editTaskForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Due Date</mat-label>
+            <input matInput formControlName="dueDate" type="date" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Priority</mat-label>
+            <mat-select formControlName="priority">
+                <mat-option value="High">High</mat-option>
+                <mat-option value="Medium">Medium</mat-option>
+                <mat-option value="Low">Low</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Status</mat-label>
+            <mat-select formControlName="status">
+                <mat-option value="Pending">Pending</mat-option>
+                <mat-option value="Completed">Completed</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="actions">
+            <button mat-button (click)="cancel()">Cancel</button>
+            <button mat-button type="submit" color="primary">Save</button>
+        </div>
+    </form>
+</div>

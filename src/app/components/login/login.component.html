@@ -1,0 +1,47 @@
+<div class="tms_container">
+    <!-- Form with form group directive for login inputs and ngSubmit event binding -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="tms_container__form">
+        <!-- Welcome header -->
+        <h2>Welcome</h2>
+
+        <!-- Username input field -->
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Username</mat-label>
+                <!-- Input element for username, bound to the form control -->
+                <input matInput formControlName="username" required autocomplete="username" />
+                <!-- Error message display for invalid username input -->
+                <mat-error *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+                    <span *ngIf="loginForm.get('username')?.errors?.['required']">Username is required.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Password input field -->
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <!-- Input element for password, bound to the form control -->
+                <input matInput formControlName="password" type="password" required autocomplete="current-password" />
+                <!-- Error message display for invalid password input -->
+                <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                    <span *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Login button -->
+        <button type="submit">Login</button>
+
+        <!-- Sign up link for users who don't have an account -->
+        <div class="signup-link">
+            <span>Don't have an account?</span>
+            <a routerLink="/signup">Sign up here</a>
+        </div>
+
+        <!-- Error message display for login failure -->
+        <div *ngIf="errorMessage" class="error">
+            {{ errorMessage }}
+        </div>
+    </form>
+</div>

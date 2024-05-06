@@ -1,0 +1,79 @@
+<div class="tms_container">
+    <!-- Signup form with form group binding to `signupForm` -->
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <h2>Welcome</h2>
+
+        <!-- Username input field -->
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username" required autocomplete="username" />
+                <!-- Error message for invalid or missing username -->
+                <mat-error *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.touched">
+                    <span *ngIf="signupForm.get('username')?.errors?.['required']">Username is required.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Email input field -->
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" type="email" required autocomplete="email" />
+                <!-- Error messages for invalid or missing email -->
+                <mat-error *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+                    <span *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</span>
+                    <span *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email format.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Password input field -->
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" type="password" required autocomplete="new-password" />
+                <!-- Error messages for invalid or missing password -->
+                <mat-error *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+                    <span *ngIf="signupForm.get('password')?.errors?.['required']">Password is required.</span>
+                    <span *ngIf="signupForm.get('password')?.errors?.['minlength']">Password must be at least 6
+                        characters long.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Confirm password input field -->
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput formControlName="confirmPassword" type="password" required
+                    autocomplete="new-password" />
+                <!-- Error message for invalid or missing confirm password -->
+                <mat-error
+                    *ngIf="signupForm.get('confirmPassword')?.invalid && signupForm.get('confirmPassword')?.touched">
+                    <span *ngIf="signupForm.get('confirmPassword')?.errors?.['required']">Confirm password is
+                        required.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Display an empty div if the password and confirm password do not match -->
+        <div
+            *ngIf="signupForm.get('password')?.value !== signupForm.get('confirmPassword')?.value && signupForm.get('confirmPassword')?.touched">
+        </div>
+
+        <!-- Submit button for the form -->
+        <button type="submit">Sign Up</button>
+
+        <!-- Link to navigate to the login page -->
+        <div class="login-link">
+            <span>Already have an account?</span>
+            <a routerLink="/login">Log in here</a>
+        </div>
+
+        <!-- Error message display -->
+        <div *ngIf="errorMessage" class="error">
+            {{ errorMessage }}
+        </div>
+    </form>
+</div>
